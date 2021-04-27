@@ -9,7 +9,13 @@ const fetchPlanets = async (page) => {
 
 const Planets = () => {
   const [page, setPage] = useState(1);
-  const { data, status } = useQuery(["planets"], () => fetchPlanets(page));
+  const { data, status } = useQuery(
+    ["planets", page],
+    () => fetchPlanets(page),
+    {
+      refetchOnWindowFocus: false,
+    }
+  );
 
   return (
     <div>
