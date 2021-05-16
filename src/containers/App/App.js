@@ -8,17 +8,19 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-        <Header />
-        <Switch>
-          {routesConfig.map((route, index) => (
-            <Route
-              key={index}
-              path={route.path}
-              exact={route.exact}
-              component={route.component}
-            />
-          ))}
-        </Switch>
+        <div className={styles.wrapper}>
+          <Header />
+          <Switch>
+            {routesConfig.map((route, index) => (
+              <Route
+                key={index}
+                path={route.path}
+                exact={route.exact}
+                component={route.component}
+              />
+            ))}
+          </Switch>
+        </div>
       </BrowserRouter>
     </>
   );
