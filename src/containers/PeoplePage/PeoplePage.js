@@ -6,7 +6,7 @@ import { getApiResource } from "@utils/network";
 import { API_PEOPLE } from "@constants/api";
 import { getPeopleId, getPeopleImage } from "@services/getPeopleData";
 
-import styles from "./PeoplePage.module.css";
+// import styles from "./PeoplePage.module.css";
 
 const PeoplePage = ({ setErrorApi }) => {
   const [people, setPeople] = useState(null);
@@ -39,7 +39,7 @@ const PeoplePage = ({ setErrorApi }) => {
 
   return (
     <>
-      <h1>Navigation</h1>
+      <h1 className="header__text">Navigation</h1>
       {people && <PeopleList people={people} />}
     </>
   );
