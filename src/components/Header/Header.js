@@ -3,14 +3,20 @@ import styles from "./Header.module.css";
 
 const Header = () => {
   return (
-    <>
-      <NavLink to="/" exact>
-        Home
-      </NavLink>
-      <NavLink to="/people" exact>
-        People
-      </NavLink>
-    </>
+    <div className={styles.container}>
+      <ul className={styles.list__container}>
+        <li>
+          <NavLink to="/" exact>
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/people" exact>
+            People
+          </NavLink>
+        </li>
+      </ul>
+    </div>
   );
 };
 
