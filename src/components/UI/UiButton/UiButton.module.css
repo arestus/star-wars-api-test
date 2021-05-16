@@ -1,0 +1,16 @@
+.button {
+  min-width: 100px;
+  padding: 10px;
+
+  font-size: var(--font-size-small);
+  font-family: var(--font-family-main);
+  font-weight: var(--font-bold);
+
+  border-radius: 3px;
+  background: none;
+  outline: none;
+
+  transition: var(--transition);
+
+  cursor: pointer;
+}
