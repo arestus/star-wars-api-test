@@ -3,6 +3,7 @@ import { getApiResource } from "@utils/network";
 import { getPeopleImage } from "@services/getPeopleData";
 import PersonInfo from "@components/PersonPage/PersonInfo";
 import PersonPhoto from "@components/PersonPage/PersonPhoto";
+import { useSelector } from "react-redux";
 
 import UiLoading from "@ui/UiLoading";
 
@@ -24,11 +25,16 @@ const PersonPage = ({ match, setErrorApi }) => {
   const [personName, setPersonName] = useState(null);
   const [personPhoto, setPersonPhoto] = useState(null);
   const [personFilms, setPersonFilms] = useState(null);
+  const [personFavorite, setPersonFavorite] = useState(false);
+
+  const storeData = useSelector((state) => state.favoriteReducer);
 
   useEffect(() => {
     (async () => {
       const id = match.params.id;
       const res = await getApiResource(`${API_PERSON}/${id}/`);
+
+      storeData[id] ? setPersonFavorite(true) : setPersonFavorite(false);
 
       setPersonId(id);
 
@@ -66,6 +72,8 @@ const PersonPage = ({ match, setErrorApi }) => {
             personId={personId}
             personPhoto={personPhoto}
             personName={personName}
+            personFavorite={personFavorite}
+            setPersonFavorite={setPersonFavorite}
           />
 
           {personInfo && <PersonInfo personInfo={personInfo} />}
