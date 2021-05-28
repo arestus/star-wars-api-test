@@ -38,8 +38,30 @@
   --border-radius-small: 3px;
   --border-radius-medium: 5px;
 
-  --theme-default-header: #cccc46;
-  --theme-default-bgimage: url(@static/bg.jpg);
+  /* THEMES */
+  --theme-light-header: #dfe2df;
+  --theme-dark-header: #ca6c6f;
+  --theme-neutral-header: #cccc46;
+  --theme-default-header: var(--theme-neutral-header);
+
+  --theme-light-bgimage: linear-gradient(
+    to right top,
+    #051937,
+    #004d7a,
+    #008793,
+    #00bf72,
+    #a8eb12
+  );
+  --theme-dark-bgimage: linear-gradient(
+    to right top,
+    #5b1953,
+    #6e1431,
+    #692813,
+    #553c00,
+    #384a0e
+  );
+  --theme-neutral-bgimage: url(@static/bg.jpg);
+  --theme-default-bgimage: var(--theme-neutral-bgimage);
 }
 
 body {
