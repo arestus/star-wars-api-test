@@ -1,12 +1,37 @@
 import { useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+
+import PeopleList from "@components/PeoplePage/PeopleList";
+
 import styles from "./FavoritesPage.module.css";
 
 const FavoritesPage = () => {
+  const [people, setPeople] = useState([]);
   const storeDate = useSelector((state) => state.favoriteReducer);
-  console.log(storeDate);
+
+  useEffect(() => {
+    const arr = Object.entries(storeDate);
+
+    if (arr.length) {
+      const res = arr.map((item) => {
+        return {
+          id: item[0],
+          ...item[1],
+        };
+      });
+
+      setPeople(res);
+    }
+  }, []);
+
   return (
     <>
-      <h1>FavoritesPage</h1>
+      <h1 className="header__text">FavoritesPage</h1>
+      {people.length ? (
+        <PeopleList people={people} />
+      ) : (
+        <h2 className={styles.comment}>No data</h2>
+      )}
     </>
   );
 };
