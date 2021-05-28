@@ -6,10 +6,11 @@ import { useSelector } from "react-redux";
 
 const Favorite = () => {
   const [count, setCount] = useState();
-  const storeData = useSelector((state) => state.favoriteReducer);
+
+  const storeDate = useSelector((state) => state.favoriteReducer);
 
   useEffect(() => {
-    const length = Object.keys(storeData).length;
+    const length = Object.keys(storeDate).length;
     length.toString().length > 2 ? setCount("...") : setCount(length);
   });
 
@@ -17,7 +18,7 @@ const Favorite = () => {
     <div className={styles.container}>
       <Link to="/favorites">
         <span className={styles.counter}>{count}</span>
-        <img className={styles.icon} src={icon} alt="favorites" />
+        <img className={styles.icon} src={icon} alt="Favorites" />
       </Link>
     </div>
   );

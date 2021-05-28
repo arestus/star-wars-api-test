@@ -24,7 +24,7 @@ const PersonPhoto = ({
         setPersonToFavorite({
           [personId]: {
             name: personName,
-            im: personPhoto,
+            img: personPhoto,
           },
         })
       );

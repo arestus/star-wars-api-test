@@ -1,5 +1,5 @@
-import { useSelector } from "react-redux";
 import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 
 import PeopleList from "@components/PeoplePage/PeopleList";
 
@@ -7,10 +7,12 @@ import styles from "./FavoritesPage.module.css";
 
 const FavoritesPage = () => {
   const [people, setPeople] = useState([]);
+
   const storeDate = useSelector((state) => state.favoriteReducer);
 
   useEffect(() => {
     const arr = Object.entries(storeDate);
+    console.log(arr);
 
     if (arr.length) {
       const res = arr.map((item) => {
@@ -19,7 +21,7 @@ const FavoritesPage = () => {
           ...item[1],
         };
       });
-
+      console.log("res", res);
       setPeople(res);
     }
   }, []);
