@@ -63,6 +63,11 @@
   --theme-neutral-bgimage: url(@static/bg.jpg);
   --theme-default-bgimage: var(--theme-neutral-bgimage);
 }
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
