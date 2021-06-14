@@ -1,0 +1,123 @@
+:root {
+  --color-white: #fff;
+  --color-light-gray: #dfe2df;
+  --color-black: #000;
+  --color-gray: #9c9c9c;
+  --color-blue: #6a83fb;
+
+  --font-size-small: 14px;
+  --font-size-medium: 16px;
+
+  --font-family-main: sans-serif;
+  --font-bold: 600;
+  --transition: 0.4s;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+img {
+  display: block;
+}
+
+.UiButton_button__1soDp {
+  min-width: 100px;
+  padding: 10px;
+
+  font-size: var(--font-size-small);
+  font-family: var(--font-family-main);
+  font-weight: var(--font-bold);
+
+  border-radius: 3px;
+  background: none;
+  outline: none;
+
+  transition: var(--transition);
+
+  cursor: pointer;
+}
+.UiButton_button__1soDp:disabled,
+.UiButton_button__1soDp:disabled:hover {
+  color: var(--color-gray);
+  background-color: transparent;
+  border-color: var(--color-gray);
+  cursor: auto;
+}
+
+.UiButton_dark__2SMzy {
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+}
+.UiButton_dark__2SMzy:hover {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+.UiButton_light__pewOF {
+  border: 1px solid var(--color-black);
+  color: var(--color-black);
+}
+.UiButton_light__pewOF:hover {
+  color: var(--color-white);
+  background-color: var(--color-black);
+}
+
+.UiInput_wrapper__input__x1lDG {
+  --border-radius: 3px;
+  --border: 3px;
+  --clear-width: 35px;
+}
+
+.UiInput_wrapper__input__x1lDG {
+  position: relative;
+  display: -webkit-inline-flex;
+  display: inline-flex;
+}
+.UiInput_input__3jWeh {
+  min-width: 300px;
+  padding: 10px 15px;
+  padding-right: calc(var(--clear-width) + 15px);
+  border: var(--border) solid;
+  border-color: var(--color-lightgray);
+  border-radius: var(--border-radius);
+  font-size: var(--font-size-medium);
+  font-family: var(--font-family-main);
+  outline: none;
+}
+.UiInput_input__3jWeh:focus {
+  border-color: var(--color-blue);
+}
+.UiInput_clear__RRLPw {
+  position: absolute;
+  top: var(--border);
+  right: var(--border);
+  width: var(--clear-width);
+  height: calc(100% - var(--border) * 2);
+  padding: 10px;
+  border: none;
+  outline: none;
+  object-fit: contain;
+  object-position: center center;
+  transition: 0.5s;
+  opacity: 0.4;
+  cursor: pointer;
+}
+.UiInput_clear__disabled__2J3aU {
+  opacity: 0.2;
+}
+
+.UiLoading_lodaer__3DcxF {
+  width: 120px;
+  height: 120px;
+}
+.UiLoading_shadow__o8R08 {
+  -webkit-filter: drop-shadow(0 0 2px #fff);
+          filter: drop-shadow(0 0 2px #fff);
+}
+
+/* .video {
+} */
+
+
+/*# sourceMappingURL=main.3120cc4c.chunk.css.map*/
