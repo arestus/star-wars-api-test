@@ -1,6 +1,7 @@
 {
   "name": "star-wars-api-test",
   "version": "0.1.0",
+  "homepage": "https://github.com/arestus/star-wars-api-test",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
@@ -27,7 +28,9 @@
     "build": "react-app-rewired build",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "build-gh-pages": "gh-pages -d build",
+    "deploy": "npm run build && npm run build-gh-pages"
   },
   "eslintConfig": {
     "extends": [
@@ -64,6 +67,7 @@
     "@storybook/node-logger": "^6.2.9",
     "@storybook/preset-create-react-app": "^3.1.7",
     "@storybook/react": "^6.2.9",
+    "gh-pages": "^3.2.0",
     "react-app-rewire-alias": "^1.0.3",
     "react-app-rewired": "^2.1.8"
   }
